@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 7846d10edaa0786a7b7df707533dbc7e995d3299
+  branch: master
+  specs:
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
+
+GIT
   remote: https://github.com/heartcombo/simple_form.git
   revision: 23205201a935c7e52c39549756e2ec2e2ec47793
   specs:
@@ -79,6 +87,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
+    bootstrap (5.1.3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.9.3, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
@@ -132,6 +144,7 @@ GEM
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
     pg (1.3.5)
+    popper_js (2.9.3)
     puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -230,7 +243,9 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  bootstrap (~> 5.1.3)
   debug
+  faker!
   font-awesome-sass (~> 6.1)
   jbuilder
   jsbundling-rails
