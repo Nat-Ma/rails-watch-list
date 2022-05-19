@@ -36,7 +36,7 @@ movies["results"].each do |movie|
         poster_url: "https://image.tmdb.org/t/p/original#{movie['poster_path']}",
         rating: movie['vote_average']
       )
-  puts "Title: #{movie.title}, #{movie.rating}"
+  puts "Title: #{movie.title}, #{movie.rating}, #{movie.poster_url}"
 end
 
 puts "Finished! Added #{Movie.count} movies into the movies database"

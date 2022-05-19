@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="d-flex justify-content-between mb-4 pt-4 align-items-center">
+      <div>
+        <%= link_to '< List overview', lists_path %>
+        <h1><%= @list.name %></h1>
+      </div>
+      <%= link_to '+ New bookmark', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
+  </div>
+  <hr>
+  <ul>
+    <% @bookmarks.each do |bookmark| %>
+      <li class="movie d-flex mb-4 justify-content-between">
+        <% movie = Movie.find(bookmark[:movie_id]) %>
+        <div class="text">
+          <h5><%= movie.title %></h5>
+          <p><%= movie.overview %></p>
+          <p>Rating: <%= movie.rating %></p>
+          <p><%= bookmark.comment %></p>
+          <%= link_to "Delete",
+                    bookmark_path(bookmark),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+        </div>
+        <img class="" src="<%= movie.poster_url %>" alt="Film poster">
+      </li>
+      <hr>
+    <% end %>
+  </ul>
+</div>
