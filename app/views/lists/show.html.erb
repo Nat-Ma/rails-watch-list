@@ -1,7 +1,7 @@
 <div class="container">
   <div class="d-flex justify-content-between mb-4 pt-4 align-items-center">
       <div>
-        <%= link_to '< List overview', lists_path %>
+        <%= link_to '< List overview', root_path %>
         <h1><%= @list.name %></h1>
       </div>
       <%= link_to '+ New bookmark', new_list_bookmark_path(@list), class: 'btn btn-primary' %>
@@ -21,7 +21,7 @@
                     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
           %>
         </div>
-        <img class="" src="<%= movie.poster_url %>" alt="Film poster">
+        <img src="<%= movie.poster_url %>" alt="Film poster">
       </li>
       <hr>
     <% end %>
